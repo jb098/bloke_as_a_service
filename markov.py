@@ -27,7 +27,7 @@ class Markov(object):
             return
 
         for i in range(len(self.words) - 2):
-            yield (self.words[i], self.words[i+1], self.words[i+2])
+            yield (str(self.words[i]), str(self.words[i+1]), str(self.words[i+2]))
 
     def database(self):
         for w1, w2, w3 in self.triples():
@@ -45,8 +45,7 @@ class Markov(object):
             return self.start_criteria()
 
     def generate_markov_text(self):
-        seed_word, next_word = self.start_criteria()
-        w1, w2 = seed_word, next_word
+        w1, w2  = self.start_criteria()
         gen_words = []
         while "." not in w2:
             gen_words.append(w1)
