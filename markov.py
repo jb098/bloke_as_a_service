@@ -1,3 +1,8 @@
+"""
+Credit to the below fot the code that this is based on.
+http://agiliq.com/blog/2009/06/generating-pseudo-random-text-with-markov-chains-u/
+"""
+
 import random
 
 class Markov(object):
