@@ -14,7 +14,6 @@ class Markov(object):
         self.word_size = len(self.words)
         self.database()
 
-
     def file_to_words(self):
         self.open_file.seek(0)
         data = self.open_file.read()
